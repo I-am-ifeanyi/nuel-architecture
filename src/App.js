@@ -1,19 +1,22 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
-import AboutUs from './pages/AboutUs'
-
-
+import React, {useState} from "react";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
-  return (
-    <div className="bg-[#F5F5F5] p-8">
-    <Routes >
-        <Route path="/" element={< LandingPage/>} />
-        <Route path="AboutUs" element={< AboutUs/>} />
-    </Routes>
-    </div>
-  )
-}
+  const [lightDark, setLightDark] = useState(true);
+  const toggleMode = () => {
+    setLightDark((current) => !current);
+  };
 
-export default App
+  return (
+    <div className={`${lightDark ? 'bg-[#F5F5F5]' : 'bg-[#121212]'} transition ease-in-out delay-1000`}>
+      <Routes>
+        <Route path="/" element={<LandingPage lightDark={lightDark} toggle={toggleMode}/>} />
+        <Route path="AboutUs" element={<AboutUs />} />
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
