@@ -49,7 +49,7 @@ const LandingPage = ({ lightDark, toggle }) => {
               </h1>
             </div>
           </div>
-          <a href="image1.png" target="_blank">
+          <a href="image1.png" target="_blank" rel="noreferrer">
             <img src="image1.png" alt="" className="m-auto mt-10 rounded" />
           </a>
         </div>
@@ -79,7 +79,7 @@ const LandingPage = ({ lightDark, toggle }) => {
           <button className="mt-10 mb-5 w-[140px] rounded-xl text-color1 text-md p-1 bg-color5">
             Read More
           </button>
-          <a href="image2.png" target="_blank">
+          <a href="image2.png" target="_blank" rel="noreferrer">
             <img src="image2.png" alt="" className="rounded m-auto" />
           </a>
         </div>
@@ -123,27 +123,27 @@ const LandingPage = ({ lightDark, toggle }) => {
         <div className="container mx-auto mt-10">
           <div className="grid grid-cols-3 gap-2">
             <div className="rounded  w-full">
-              <a href="image4.jpg" target="_blank">
+              <a href="image4.jpg" target="_blank" rel="noreferrer">
                 <img src="image4.jpg" alt="" />
               </a>
             </div>
             <div className="rounded  w-full col-span-2 row-span-2">
-              <a href="image6.jpg" target="_blank">
+              <a href="image6.jpg" target="_blank" rel="noreferrer">
                 <img src="image6.jpg" alt="" />
               </a>
             </div>
             <div className="rounded  w-full ">
-              <a href="image3.jpg" target="_blank">
+              <a href="image3.jpg" target="_blank" rel="noreferrer">
                 <img src="image3.jpg" alt="" />
               </a>
             </div>
             <div className="rounded  w-full col-span-2">
-              <a href="image5.jpg" target="_blank">
+              <a href="image5.jpg" target="_blank" rel="noreferrer">
                 <img src="image5.jpg" alt="" />
               </a>
             </div>
             <div className="rounded  w-full">
-              <a href="image6.jpg" target="_blank">
+              <a href="image6.jpg" target="_blank" rel="noreferrer">
                 <img src="image6.jpg" alt="" />
               </a>
             </div>
@@ -167,13 +167,13 @@ const LandingPage = ({ lightDark, toggle }) => {
               <li>3D Visualization</li>
             </ul>
             <div className="flex flex-col gap-5 mt-10">
-              <a href="image7.jpg" target="_blank">
+              <a href="image7.jpg" target="_blank" rel="noreferrer">
                 <img src="image7.jpg" alt="" />
               </a>
-              <a href="image8.jpg" target="_blank">
+              <a href="image8.jpg" target="_blank" rel="noreferrer">
                 <img src="image8.jpg" alt="" />
               </a>
-              <a href="image9.jpg" target="_blank">
+              <a href="image9.jpg" target="_blank" rel="noreferrer">
                 <img src="image9.jpg" alt="" />
               </a>
             </div>

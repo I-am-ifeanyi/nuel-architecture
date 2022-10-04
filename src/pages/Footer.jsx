@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   BsFacebook,
@@ -43,22 +42,22 @@ const Footer = ({lightDark, toggle}) => {
         </ul>
         <h1 className="underline">Our Socials</h1>
         <ul className="flex my-3 gap-8">
-          <a href="https://wa.me/+2348135362422" target="_blank">
+          <a href="https://wa.me/+2348135362422" target="_blank" rel="noreferrer">
             <FaWhatsapp />
           </a>
-          <a href="https://www.facebook.com/Nuelic" target="_blank">
+          <a href="https://www.facebook.com/Nuelic" target="_blank" rel="noreferrer">
             <BsFacebook />
           </a>
           <a
             href="https://www.instagram.com/invites/contact/?i=8loudca0xep4&utm_content=1l60h3h"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <BsInstagram />
           </a>
 
           <a
             href="https://www.upwork.com/freelancers/~01c6d2d5ed93f5e5f7"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <SiUpwork />
           </a>
@@ -85,7 +84,7 @@ const Footer = ({lightDark, toggle}) => {
         <div
           className={`${
             lightDark ? "bg-color4" : "bg-[red]"
-          } border border-spacing-4 border-2 w-1/6 h-[25px] rounded-2xl relative p-1`}
+          } border border-spacing-4 w-1/6 h-[25px] rounded-2xl relative p-1`}
           onClick={toggle}
         >
           <div style={lightDark ? style1 : style2}></div>
