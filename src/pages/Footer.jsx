@@ -13,7 +13,7 @@ const Footer = ({lightDark, toggle}) => {
  
 
   const style1 = {
-    backgroundColor: "red",
+    backgroundColor: "#FF5733",
     padding: "2px",
     borderRadius: "15px",
     width: "25px",
@@ -83,7 +83,7 @@ const Footer = ({lightDark, toggle}) => {
         </h1>
         <div
           className={`${
-            lightDark ? "bg-color4" : "bg-[red]"
+            lightDark ? "bg-color4" : "bg-[#FF5733]"
           } border border-spacing-4 w-1/6 h-[25px] rounded-2xl relative p-1`}
           onClick={toggle}
         >
