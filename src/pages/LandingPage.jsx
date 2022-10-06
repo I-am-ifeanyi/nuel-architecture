@@ -6,8 +6,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 const LandingPage = ({ lightDark, toggle }) => {
   return (
     <>
-      <div className="p-6">
-        <div className="flex justify-between">
+      <div className="p-6 md:px-28">
+        <div className="flex justify-between items-center">
           <h1
             className={`${
               lightDark ? "text-color5" : "text-color1"
@@ -15,14 +15,20 @@ const LandingPage = ({ lightDark, toggle }) => {
           >
             NuelC Studios
           </h1>
-          <nav className="hidden md:flex justify-between border w-[70%]">
-          <ul className="flex gap-10">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-          </ul>
-          <h1 className="ml-auto">Hire Us</h1>
+          <nav className="hidden md:flex justify-between w-[65%] items-center cursor-pointer">
+            <ul
+              className={`${
+                lightDark ? "" : "text-color1"
+              } flex gap-10 font-bold`}
+            >
+              <li className="hover:text-color5">Home</li>
+              <li className="hover:text-color5">About</li>
+              <li className="hover:text-color5">Services</li>
+              <li className="hover:text-color5">Projects</li>
+            </ul>
+            <h1 className="ml-auto px-4 py-1 rounded-md text-color1 bg-color5 hover:translate-x-1 hover:bg-[#6b1b09]">
+              Hire Us
+            </h1>
           </nav>
           <GiHamburgerMenu
             className={`${
@@ -30,12 +36,13 @@ const LandingPage = ({ lightDark, toggle }) => {
             } text-[30px] text-color1 md:hidden`}
           />
         </div>
-        <div className={`${lightDark ? "text-color2" : "text-color1"} mt-20`}>
-          <h1 className="text-2xl font-bold">
+        <div className={`${lightDark ? "text-color2" : "text-color1"} mt-20 md:ml-20`}>
+          <div className={`md:w-2/5 sm:w-full md:h-auto md:py-5 md:px-5 md:mb-[-450px] md:mt-[200px] md:relative md:bg-opacity-70 md:shadow-lg ${lightDark ? "md:bg-color1" : "md:bg-[black]"}  md:z-40`}>
+          <h1 className="text-2xl font-bold  md:w-[70%]">
             We Help You actualize Your Dream{" "}
             <>
               <p className="inline">Home!</p>
-              <img src="line.png" alt="" className="ml-[70px] w-[100px]" />
+              <img src="line.png" alt="" className="ml-[70px] w-[100px] md:ml-[41%]" />
             </>
           </h1>
           <p className="mt-5 ">
@@ -44,11 +51,11 @@ const LandingPage = ({ lightDark, toggle }) => {
             technology and innovations to satisfy your architectural needs.
             Please contact us to get started!
           </p>
-          <div className="flex justify-around mt-10">
-            <div className="transition ease-in-out duration-1000 bg-color5 rounded-xl w-1/2 mr-3 p-1 hover:bg-[#792815]">
+          <div className="flex mt-10 md:mt-2">
+            <div className="bg-color5 rounded-xl w-1/2 mr-3 p-1 hover:bg-[#792815] md:w-1/3 md:text-sm md:flex md:items-center md:justify-center md:rounded md:hover:translate-y-0.5">
               <h1 className="text-color1 text-center">Request a Project</h1>
             </div>
-            <div className="border-2 border-color5 rounded-xl w-1/2 p-1">
+            <div className="border-2 border-color5 rounded-xl w-1/2 p-1 md:w-1/3 md:text-sm md:flex md:items-center md:justify-center md:rounded md:hover:translate-y-0.5">
               <h1
                 className={`${
                   lightDark ? "text-color5" : "text-color1"
@@ -57,16 +64,20 @@ const LandingPage = ({ lightDark, toggle }) => {
                 Contact Us
               </h1>
             </div>
+            </div>
           </div>
           <a href="image1.png" target="_blank" rel="noreferrer">
-            <img src="image1.png" alt="" className="m-auto mt-10 rounded" />
+            <div className="md:w-[70%] md:h-[500px] md:m-auto md:z-10">
+            <img src="image12.jpeg" alt="" className="m-auto mt-10 rounded md:w-[100%] md:h-[100%]" />
+            </div>
           </a>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 md:flex md:items-center md:justify-around md:gap-10">
+          <div className="md:w-1/3">
           <h1
             className={`${
               lightDark ? "text-color5" : "text-color1"
-            } font-bold text-3xl`}
+            } font-bold text-2xl`}
           >
             About NuelC
           </h1>
@@ -78,21 +89,23 @@ const LandingPage = ({ lightDark, toggle }) => {
             We specialize in Architectural Planning, Designs and Real Estate
             offers.
           </p>
-          <p className={`${lightDark ? "text-color2" : "text-color1"} text-sm`}>
+          <p className={`${lightDark ? "text-color2" : "text-color1"} text-sm md:text-justify`}>
             NuelC Studio is a company founded in 2015 by Architect Chinedu
             Emmanuel, which is specialized in architectural modelling of both
             commercial and private structures, Interior and exterior designs,
             buying and selling of real estate properties, consultations on
             construction works and so many others more...
           </p>
-          <button className="mt-10 mb-5 w-[140px] rounded-xl text-color1 text-md p-1 bg-color5">
+          <button className="mt-10 mb-5 w-[140px] rounded md:hover:bg-[red] md:hover:translate-y-1 text-color1 text-md p-1 bg-color5">
             Read More
           </button>
+          </div>
           <a href="image2.png" target="_blank" rel="noreferrer">
-            <img src="image2.png" alt="" className="rounded m-auto" />
+            <img src="image1.png" alt="" className="rounded m-auto md:shadow-2xl md:w-full" />
           </a>
         </div>
-        <div className="mt-10">
+        <div className="md:flex md:items-center md:gap-10 md:mt-10">
+        <div className="mt-10 md:w-1/3 md:flex md:flex-col md:gap-5">
           <h1
             className={`font-bold text-2xl ${
               lightDark ? "text-color5" : "text-color1"
@@ -129,7 +142,7 @@ const LandingPage = ({ lightDark, toggle }) => {
             Interior Design <BsArrowUpRight />
           </p>
         </div>
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto mt-10 md:w-2/4">
           <div className="grid grid-cols-3 gap-2">
             <div className="rounded  w-full">
               <a href="image4.jpg" target="_blank" rel="noreferrer">
@@ -157,7 +170,11 @@ const LandingPage = ({ lightDark, toggle }) => {
               </a>
             </div>
           </div>
+          </div>
+          </div>
+          <div>
           <div className="mt-10">
+            <div className="md:flex md:items-center md:gap-28 md:justify-between">
             <h1
               className={`font-bold ${
                 lightDark ? "text-color5" : "text-color1"
@@ -168,30 +185,41 @@ const LandingPage = ({ lightDark, toggle }) => {
             <ul
               className={`${
                 lightDark ? "" : "text-color1"
-              } mt-5 flex flex-col gap-5 text-md`}
+              } mt-5 flex flex-col gap-10 text-md md:text-lg md:flex md:flex-row`}
             >
               <li>Interior Design</li>
               <li>Architectural Design</li>
               <li>Real Estate</li>
               <li>3D Visualization</li>
             </ul>
-            <iframe  src="https://www.youtube.com/embed/MRqZutLJErA" title="3D Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="w-full h-60 mt-5"></iframe>
-            <div className="flex flex-col gap-5 mt-10">
+            </div>
+            <div className="md:flex md:items-center md:gap-5">
+            <iframe
+              src="https://www.youtube.com/embed/MRqZutLJErA"
+              title="3D Animation"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              className="w-full h-60 mt-5 md:m-auto md:mt-10"
+            ></iframe>
+            <div className="flex flex-col gap-5 mt-10 md:flex md:flex-row md:justify-between">
               <a href="image7.jpg" target="_blank" rel="noreferrer">
-                <img src="image7.jpg" alt="" />
+                <img src="image7.jpeg" alt="" className="md:shadow md:shadow-color2" />
               </a>
               <a href="image8.jpg" target="_blank" rel="noreferrer">
-                <img src="image8.jpg" alt="" />
+                <img src="image8.jpg" alt="" className="md:shadow md:shadow-color2" />
               </a>
               <a href="image9.jpg" target="_blank" rel="noreferrer">
-                <img src="image9.jpg" alt="" />
+                <img src="image9.jpg" alt="" className="md:shadow md:shadow-color2" />
               </a>
             </div>
-            <div className="m-auto mt-5 mb-5 w-[140px] rounded-xl text-color1 text-center text-md p-1 bg-color5">
+            </div>
+            <div className="m-auto mt-5 mb-5 w-[140px] rounded-xl text-color1 text-center text-md p-1 bg-color5 md:w-[200px] md:rounded md:hover:bg-[red] md:hover:translate-y-1">
               View more
             </div>
           </div>
-          <div className={`${lightDark ? "" : "text-color1"}`}>
+          <div className="md:flex md:flex-row-reverse md:items-center md:gap-20 md:ml-[150px] md:mt-10">
+          <div className={`${lightDark ? "" : "text-color1"} md:w-1/2`}>
             <h1
               className={`${
                 lightDark ? "text-color5" : "text-color1"
@@ -199,7 +227,7 @@ const LandingPage = ({ lightDark, toggle }) => {
             >
               Benefits
             </h1>
-            <ul className="mt-5 flex flex-col gap-5 text-md">
+            <ul className="mt-5 flex flex-col gap-5 text-md md:text-lg">
               <li className="flex items-center gap-5">
                 {" "}
                 <GiBeveledStar />
@@ -219,7 +247,7 @@ const LandingPage = ({ lightDark, toggle }) => {
               </li>
             </ul>
           </div>
-          <div className="mt-10 shadow p-1">
+          <div className="mt-10 shadow p-1 md:w-2/3">
             <img src="image10.jpg" alt="" className="w-4/5" />
             <img
               src="image11.jpg"
@@ -227,16 +255,22 @@ const LandingPage = ({ lightDark, toggle }) => {
               className="w-2/3 ml-[auto] mt-[-30px] "
             />
           </div>
-          <div className="flex flex-col gap-5">
-            <h1
+          </div>
+          <h1
               className={`font-bold ${
                 lightDark ? "text-color5" : "text-color1"
-              } text-2xl my-5`}
+              } text-2xl my-5 md:text-center md:mt-20`}
             >
               Our Upwork Reviews
             </h1>
-            <div className={`flex items-center p-3 border gap-5 ${lightDark ? "" : "text-color1"} ${lightDark ? "bg-color1" : "bg-[#121212]"}`}>
-              <div>
+          <div className="flex flex-col gap-5 md:flex md:flex-row">
+           
+            <div
+              className={`flex items-center p-3 border gap-5 ${
+                lightDark ? "" : "text-color1"
+              } ${lightDark ? "bg-color1" : "bg-[#121212]"}  md:w-1/3`}
+            >
+              <div className="">
                 <a
                   href="https://www.upwork.com/freelancers/~01c6d2d5ed93f5e5f7"
                   target="_blank"
@@ -256,7 +290,11 @@ const LandingPage = ({ lightDark, toggle }) => {
                 </a>
               </div>
             </div>
-            <div className={`flex items-center border p-3 gap-5 ${lightDark ? "" : "text-color1"} ${lightDark ? "bg-color1" : "bg-[#121212]"}`}>
+            <div
+              className={`flex items-center border p-3 gap-5 ${
+                lightDark ? "" : "text-color1"
+              } ${lightDark ? "bg-color1" : "bg-[#121212]"} md:w-1/3`}
+            >
               <div>
                 <a
                   href="https://www.upwork.com/freelancers/~01c6d2d5ed93f5e5f7"
@@ -273,21 +311,25 @@ const LandingPage = ({ lightDark, toggle }) => {
                 </a>
               </div>
             </div>
-            <div className={`flex items-center border p-3 gap-5 ${lightDark ? "" : "text-color1"} ${lightDark ? "bg-color1" : "bg-[#121212]"}`}>
+            <div
+              className={`flex items-center border p-3 gap-5 ${
+                lightDark ? "" : "text-color1"
+              } ${lightDark ? "bg-color1" : "bg-[#121212]"} md:w-1/3`}
+            >
               <div>
-              <a
+                <a
                   href="https://www.upwork.com/freelancers/~01c6d2d5ed93f5e5f7"
                   target="_blank"
                   rel="noreferrer"
                 >
-              <h1 className="font-bold text-md mb-3">
+                  <h1 className="font-bold text-md mb-3">
                     Project: Home Remodel + Additional Floor Plans
                   </h1>
-                <p>
-                "Michael was great to work with. He completed the job ahead of schedule, was quick to respond to messages, and took care of everything we needed. Would work with him again!"
-
-
-                </p>
+                  <p>
+                    "Michael was great to work with. He completed the job ahead
+                    of schedule, was quick to respond to messages, and took care
+                    of everything we needed. Would work with him again!"
+                  </p>
                 </a>
               </div>
             </div>
