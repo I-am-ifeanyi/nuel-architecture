@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./Footer.jsx";
 import { GiHamburgerMenu, GiBeveledStar } from "react-icons/gi";
 import { BsArrowUpRight } from "react-icons/bs";
+import {MdOutlineCancel} from "react-icons/md"
 
 const LandingPage = ({ lightDark, toggle }) => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const toggleNavbar = () => {
+    setShowNavbar((current) => !current);
+  };
   return (
     <>
       <div className="p-6 md:px-28">
@@ -33,12 +39,46 @@ const LandingPage = ({ lightDark, toggle }) => {
               Hire Us
             </h1>
           </nav>
-          <GiHamburgerMenu
+          {showNavbar ? <MdOutlineCancel
             className={`${
               lightDark ? "text-color2" : "text-color1"
             } text-[30px] text-color1 md:hidden`}
-          />
+            onClick={toggleNavbar}
+          /> : <GiHamburgerMenu
+          className={`${
+            lightDark ? "text-color2" : "text-color1"
+          } text-[30px] text-color1 md:hidden`}
+          onClick={toggleNavbar}
+        />}
         </div>
+        {showNavbar && (
+          <div
+            className="md:hidden flex flex-col items-center bg-[#5c5b5b] text-color1 py-5 relative z-50"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
+            <ul
+              className={`${
+                lightDark ? "" : "text-color1"
+              } flex flex-col gap-5 font-bold text-lg w-full items-center`}
+            >
+              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
+                Home
+              </li>
+              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
+                About
+              </li>
+              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
+                Services
+              </li>
+              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
+                Projects
+              </li>
+            </ul>
+            <h1 className=" mt-5 font-bold text-lg">Hire Us</h1>
+          </div>
+        )}
         <div
           className={`${
             lightDark ? "text-color2" : "text-color1"
@@ -267,7 +307,8 @@ const LandingPage = ({ lightDark, toggle }) => {
                   <img
                     src="image7.jpeg"
                     alt=""
-                    className="md:shadow md:shadow-color2" data-aos="zoom-in-up"
+                    className="md:shadow md:shadow-color2"
+                    data-aos="zoom-in-up"
                     data-aos-easing="linear"
                     data-aos-duration="3000"
                   />
@@ -276,7 +317,8 @@ const LandingPage = ({ lightDark, toggle }) => {
                   <img
                     src="image8.jpg"
                     alt=""
-                    className="md:shadow md:shadow-color2" data-aos="zoom-in-up"
+                    className="md:shadow md:shadow-color2"
+                    data-aos="zoom-in-up"
                     data-aos-easing="linear"
                     data-aos-duration="3000"
                   />
@@ -285,7 +327,8 @@ const LandingPage = ({ lightDark, toggle }) => {
                   <img
                     src="image9.jpg"
                     alt=""
-                    className="md:shadow md:shadow-color2" data-aos="zoom-in-up"
+                    className="md:shadow md:shadow-color2"
+                    data-aos="zoom-in-up"
                     data-aos-easing="linear"
                     data-aos-duration="2000"
                   />
@@ -297,9 +340,12 @@ const LandingPage = ({ lightDark, toggle }) => {
             </div>
           </div>
           <div className="md:flex md:flex-row-reverse md:items-center md:gap-20 md:ml-[150px] md:mt-10">
-            <div className={`${lightDark ? "" : "text-color1"} md:w-1/2`} data-aos="fade-left"
-            data-aos-easing="linear"
-            data-aos-duration="1000">
+            <div
+              className={`${lightDark ? "" : "text-color1"} md:w-1/2`}
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <h1
                 className={`${
                   lightDark ? "text-color5" : "text-color1"
@@ -327,9 +373,12 @@ const LandingPage = ({ lightDark, toggle }) => {
                 </li>
               </ul>
             </div>
-            <div className="mt-10 shadow p-1 md:w-2/3" data-aos="fade-right"
-            data-aos-easing="linear"
-            data-aos-duration="1000">
+            <div
+              className="mt-10 shadow p-1 md:w-2/3"
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <img src="image10.jpg" alt="" className="w-4/5" />
               <img
                 src="image11.jpg"
