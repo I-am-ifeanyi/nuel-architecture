@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import AboutUs from "./pages/AboutUs";
-
 
 const App = () => {
   const [lightDark, setLightDark] = useState(true);
@@ -10,11 +9,47 @@ const App = () => {
     setLightDark((current) => !current);
   };
 
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const toggleNavbar = () => {
+    setShowNavbar((current) => !current);
+  };
+
+  const switchClose = () => {
+    setShowNavbar(false);
+  };
+
   return (
-    <div className={`${lightDark ? 'bg-[#F5F5F5]' : 'bg-[#121212]'} transition ease-in-out delay-1000`}>
+    <div
+      className={`${
+        lightDark ? "bg-[#F5F5F5]" : "bg-[#121212]"
+      } transition ease-in-out delay-1000`}
+    >
       <Routes>
-        <Route path="/" element={<LandingPage lightDark={lightDark} toggle={toggleMode}/>} />
-        <Route path="AboutUs" element={<AboutUs />} />
+        <Route
+          path="/"
+          element={
+            <LandingPage
+              lightDark={lightDark}
+              toggle={toggleMode}
+              showNavbar={showNavbar}
+              toggleNavbar={toggleNavbar}
+              switchClose={switchClose}
+            />
+          }
+        />
+        <Route
+          path="AboutUs"
+          element={
+            <AboutUs
+              lightDark={lightDark}
+              toggle={toggleMode}
+              showNavbar={showNavbar}
+              toggleNavbar={toggleNavbar}
+              switchClose={switchClose}
+            />
+          }
+        />
       </Routes>
     </div>
   );

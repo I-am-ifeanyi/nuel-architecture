@@ -1,88 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
+import NavLinks from "./NavLinks.jsx";
 import Footer from "./Footer.jsx";
-import { GiHamburgerMenu, GiBeveledStar } from "react-icons/gi";
+import { GiBeveledStar } from "react-icons/gi";
 import { BsArrowUpRight } from "react-icons/bs";
-import {MdOutlineCancel} from "react-icons/md"
 
-const LandingPage = ({ lightDark, toggle }) => {
-  const [showNavbar, setShowNavbar] = useState(false);
-
-  const toggleNavbar = () => {
-    setShowNavbar((current) => !current);
-  };
+const LandingPage = ({
+  lightDark,
+  toggle,
+  switchClose,
+  showNavbar,
+  toggleNavbar,
+}) => {
   return (
     <>
       <div className="p-6 md:px-28">
-        <div className="flex justify-between items-center">
-          <h1
-            className={`${
-              lightDark ? "text-color5" : "text-color1"
-            } font-bold text-xl`}
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            NuelC Studios
-          </h1>
-          <nav className="hidden md:flex justify-between w-[65%] items-center cursor-pointer">
-            <ul
-              className={`${
-                lightDark ? "" : "text-color1"
-              } flex gap-10 font-bold`}
-            >
-              <li className="hover:text-color5">Home</li>
-              <li className="hover:text-color5">About</li>
-              <li className="hover:text-color5">Services</li>
-              <li className="hover:text-color5">Projects</li>
-            </ul>
-            <h1 className="ml-auto px-4 py-1 rounded-md text-color1 bg-color5 hover:translate-x-1 hover:bg-[#6b1b09]">
-              Hire Us
-            </h1>
-          </nav>
-          {showNavbar ? <MdOutlineCancel
-            className={`${
-              lightDark ? "text-color2" : "text-color1"
-            } text-[30px] text-color1 md:hidden`}
-            onClick={toggleNavbar}
-          /> : <GiHamburgerMenu
-          className={`${
-            lightDark ? "text-color2" : "text-color1"
-          } text-[30px] text-color1 md:hidden`}
-          onClick={toggleNavbar}
-        />}
-        </div>
-        {showNavbar && (
-          <div
-            className="md:hidden flex flex-col items-center bg-[#5c5b5b] text-color1 py-5 relative z-50"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <ul
-              className={`${
-                lightDark ? "" : "text-color1"
-              } flex flex-col gap-5 font-bold text-lg w-full items-center`}
-            >
-              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
-                Home
-              </li>
-              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
-                About
-              </li>
-              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
-                Services
-              </li>
-              <li className="hover:text-color5 border-b-2 w-full text-center pb-2">
-                Projects
-              </li>
-            </ul>
-            <h1 className=" mt-5 font-bold text-lg">Hire Us</h1>
-          </div>
-        )}
+        <NavLinks
+          lightDark={lightDark}
+          showNavbar={showNavbar}
+          toggleNavbar={toggleNavbar}
+          switchClose={switchClose}
+        />
+
         <div
           className={`${
             lightDark ? "text-color2" : "text-color1"
           } mt-20 md:ml-20`}
+          onClick={switchClose}
         >
           <div
             className={`md:w-2/5 sm:w-full md:h-auto md:py-5 md:px-5 md:mb-[-450px] md:mt-[200px] md:relative md:bg-opacity-70 md:shadow-lg ${
