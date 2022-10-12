@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks.jsx";
 import Footer from "./Footer.jsx";
 import { GiBeveledStar } from "react-icons/gi";
@@ -99,7 +100,7 @@ const LandingPage = ({
             <p
               className={`${
                 lightDark ? "text-color2" : "text-color1"
-              } text-md mt-5 mb-5 `}
+              } text-md mt-5 mb-3 `}
             >
               We specialize in Architectural Planning, Designs and Real Estate
               offers.
@@ -107,7 +108,7 @@ const LandingPage = ({
             <p
               className={`${
                 lightDark ? "text-color2" : "text-color1"
-              } text-sm md:text-justify`}
+              } text-sm md:text-justify mb-5`}
             >
               NuelC Studio is a company founded in 2015 by Architect Chinedu
               Emmanuel, which is specialized in architectural modelling of both
@@ -115,9 +116,9 @@ const LandingPage = ({
               buying and selling of real estate properties, consultations on
               construction works and so many others more...
             </p>
-            <button className="mt-10 mb-5 w-[140px] rounded md:hover:bg-[red] md:hover:translate-y-1 text-color1 text-md p-1 bg-color5">
+            <Link to="AboutUs"className="mt-10 mb-5 w-[140px] rounded md:hover:bg-[red] md:hover:translate-y-1 text-color1 text-md p-1 bg-color5">
               Read More
-            </button>
+            </Link>
           </div>
           <a
             href="image2.png"
