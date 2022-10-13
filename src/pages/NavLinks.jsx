@@ -26,10 +26,10 @@ const NavLinks = ({
               lightDark ? "text-color5" : "text-color1"
             } flex gap-10 font-bold`}
           >
-            <Link to="/" className="hover:text-[#121212]">Home</Link>
-            <Link to="AboutUs" className="hover:text-[#121212]">About</Link>
-            <li className="hover:text-[#121212]">Services</li>
-            <li className="hover:text-[#121212]">Projects</li>
+            <Link to="/" className="hover:text-[#121212] hover:underline">Home</Link>
+            <Link to="AboutUs" className="hover:text-[#121212] hover:underline">About</Link>
+            <li className="hover:text-[#121212] hover:underline">Services</li>
+            <li className="hover:text-[#121212] hover:underline">Projects</li>
           </ul>
           <h1 className="ml-auto px-4 py-1 rounded-md text-color1 bg-color5 hover:translate-x-1 hover:bg-[#6b1b09]">
             Hire Us

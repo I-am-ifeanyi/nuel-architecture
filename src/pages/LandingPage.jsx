@@ -116,7 +116,7 @@ const LandingPage = ({
               buying and selling of real estate properties, consultations on
               construction works and so many others more...
             </p>
-            <Link to="AboutUs"className="mt-10 mb-5 w-[140px] rounded md:hover:bg-[red] md:hover:translate-y-1 text-color1 text-md p-1 bg-color5">
+            <Link to="AboutUs"className="mt-10 mb-10 w-[140px] rounded md:hover:bg-[red] md:hover:translate-y-1 text-color1 text-md p-1 bg-color5">
               Read More
             </Link>
           </div>
@@ -131,7 +131,7 @@ const LandingPage = ({
             <img
               src="image1.png"
               alt=""
-              className="rounded m-auto md:shadow-2xl md:w-full"
+              className="rounded mt-10 md:shadow-2xl md:w-full"
             />
           </a>
         </div>
